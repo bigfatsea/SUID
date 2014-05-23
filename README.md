@@ -2,13 +2,11 @@ SUID
 ====
 SUID = Simple Unique Identifier
 
-### Spec
+### Spec:
 
 
 ```
 timestamp+increment+instanceId
-| 63...32   | 31...8       | 7...0      |
-| timestamp | increment    | instanceId |
 ```
 
 
