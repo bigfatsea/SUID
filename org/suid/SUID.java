@@ -8,7 +8,8 @@ import java.util.Set;
 import java.util.concurrent.atomic.AtomicLong;
 
 /**
- * <h2>Simple Unique Identifier</h2> use DIFFERENT instanceId in DIFFERENT applications
+ * <h2>Simple Unique Identifier</h2>
+ * please use DIFFERENT instanceId in multi-instance applications
  * 
  * <pre>
  * id = timestamp+increment+instanceId
@@ -19,7 +20,7 @@ import java.util.concurrent.atomic.AtomicLong;
  * +-----------+--------------+------------+
  * </pre>
  * 
- * @author Stanford
+ * @author Stanford Shi
  * 
  */
 public class SUID {
