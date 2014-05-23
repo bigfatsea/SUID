@@ -1,6 +1,6 @@
 SUID
 ====
-Simple Unique Identifier, influenced by ObjectId, is a lightweight GUID/UUID implementation. 
+Simple Unique Identifier, influenced by [ObjectId](http://api.mongodb.org/java/2.0/org/bson/types/ObjectId.html), is a lightweight [GUID](http://en.wikipedia.org/wiki/Globally_unique_identifier)/[UUID](http://en.wikipedia.org/wiki/Universally_unique_identifier) implementation. 
 
 ### Spec:
 
