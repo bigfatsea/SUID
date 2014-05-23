@@ -1,6 +1,6 @@
 SUID
 ====
-Simple Unique Identifier
+Simple Unique Identifier, influenced by ObjectId, is a lightweight GUID/UUID implementation. 
 
 ### Spec:
 
