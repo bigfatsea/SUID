@@ -6,7 +6,7 @@ SUID = Simple Unique Identifier
 
 
 ```
-    timestamp+increment+instanceId
+    timestamp + increment + instanceId
     +-----------+--------------+------------+
     | 63...32   | 31...8       | 7...0      |
     +-----------+--------------+------------+
