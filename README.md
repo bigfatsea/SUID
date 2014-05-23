@@ -1,6 +1,6 @@
 SUID
 ====
-SUID = Simple Unique Identifier
+Simple Unique Identifier
 
 ### Spec:
 
