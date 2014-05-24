@@ -63,14 +63,20 @@ public class SUID {
 		return INSTANCES[0];
 	}
 
+	public static String toString(long id) {
+		String hex = Long.toHexString(id);
+		return hex.subSequence(0, 8) //
+				+ "-" + hex.substring(8, 14) //
+				+ "-" + hex.substring(14);
+	}
+
 	public static String parse(long id) {
 		long time = (System.currentTimeMillis() >> 42 << 42) + (id >> 22);
 		long inc = (id >> 8) & xFFFFFF;
 		long instanceId = id & xFF;
 
 		return id + " (DEC)"//
-				+ "\n" + Long.toHexString(id) + "    (HEX)" //
-				+ "\n+-------+-----+-    (MSK)" //
+				+ "\n" + toString(id) + "  (HEX)" //
 				+ "\ntime=" + SDF_MED.format(new Date(time)) + ", instanceId=" + instanceId + ", inc=" + inc;
 	}
 
