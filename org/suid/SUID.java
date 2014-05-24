@@ -70,7 +70,8 @@ public class SUID {
 				+ "-" + hex.substring(14);
 	}
 
-	public static String parse(long id) {
+
+	public static String toStringLong(long id) {
 		long time = (System.currentTimeMillis() >> 42 << 42) + (id >> 22);
 		long inc = (id >> 8) & xFFFFFF;
 		long instanceId = id & xFF;
@@ -82,20 +83,20 @@ public class SUID {
 
 	public static void main(String[] args) {
 		System.out.println("\n--- get id");
-		System.out.println(parse(id().get()));
-		System.out.println(parse(id().get()));
+		System.out.println(toStringLong(id().get()));
+		System.out.println(toStringLong(id().get()));
 
 		System.out.println("\n--- get id by app id");
-		System.out.println(parse(id(13).get()));
-		System.out.println(parse(id(13).get()));
+		System.out.println(toStringLong(id(13).get()));
+		System.out.println(toStringLong(id(13).get()));
 
 		System.out.println("\n--- duplication test ...");
 		long id = 0, ts = System.currentTimeMillis();
-		Set<Long> set = new HashSet();
+		Set<Long> set = new HashSet<Long>();
 		for (int i = 0; i < 1000 * 1000; i++) {
 			id = id(i & 1).get();
 			if (!set.add(id))
-				System.out.println("!!!!!! duplication found:" + parse(id));
+				System.out.println("!!!!!! duplication found:" + toStringLong(id));
 		}
 		System.out.println("--- duplication test passed, cost " + (System.currentTimeMillis() - ts) + "ms");
 	}
